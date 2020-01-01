@@ -82,7 +82,7 @@ PID_FILE=${USER_HOME}/.dropbox/dropbox.pid
 
 # Download Dropbox daemon
 echo -e "${C_CYAN}Downloading Dropbox...${C_OFF}"
-( cd ${USER_HOME} && wget -q -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - )
+( cd ${USER_HOME} && wget -q -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf - && chown -R ${USER_NAME}:${GROUP_NAME} ${USER_HOME}/.dropbox-dist )
 if [ -d ${USER_HOME}/.dropbox-dist ]; then
   echo -e "${C_CYAN}Dropbox version is `cat ${USER_HOME}/.dropbox-dist/VERSION`${C_OFF}"
 else
