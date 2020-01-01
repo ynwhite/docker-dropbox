@@ -1,6 +1,8 @@
 FROM frolvlad/alpine-glibc
 
-MAINTAINER Yusuke KOMORI <komo@littleforest.jp>
+# based on https://hub.docker.com/r/littlef/dropbox
+# base MAINTAINER Yusuke KOMORI <komo@littleforest.jp> 
+MAINTAINER Yoshinori NAKATA <ynwhite@gmail.com>
 
 USER root
 
